@@ -1,0 +1,268 @@
+/* src/App.css */
+body {
+  background-color: #f4f6f8;
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: #1e293b;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+.header {
+  background: #0f172a;
+  color: white;
+  padding: 24px 40px;
+  text-align: center;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+/* Main Layout */
+.container {
+  display: flex;
+  max-width: 1300px;
+  margin: 40px auto;
+  padding: 0 20px;
+  gap: 40px;
+  align-items: flex-start; 
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.main-content {
+  flex: 2;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 24px;
+  color: #334155;
+}
+
+/* Well-Spaced Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+.item-placeholder {
+  height: 120px;
+  background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
+  color: #475569;
+  font-size: 40px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.product-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 8px;
+  color: #0f172a;
+}
+
+.product-price {
+  color: #059669;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin: 0 0 20px;
+}
+
+.add-btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.2s ease;
+}
+
+.add-btn:hover {
+  background: #1d4ed8;
+}
+
+/* Sidebar (Cart & Recommendations) */
+.sidebar {
+  flex: 1;
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+  position: sticky;
+  top: 40px; 
+}
+
+.sidebar h3 {
+  margin-top: 0;
+  color: #1e293b;
+  font-size: 1.2rem;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #f1f5f9;
+}
+
+.cart-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 10px;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 0.95rem;
+}
+
+.cart-item-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  color: #ef4444; /* Subtle Red */
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: 0 6px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  line-height: 1;
+}
+
+.remove-btn:hover {
+  color: #b91c1c; /* Darker Red */
+  background: #fee2e2;
+}
+
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding-top: 10px;
+  color: #059669;
+}
+
+.empty-text {
+  color: #64748b;
+  font-size: 0.95rem;
+  font-style: italic;
+}
+
+/* INTERACTIVE RECOMMENDATION CARDS */
+.recommendation-section {
+  margin-top: 30px;
+}
+
+.rec-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.rec-card {
+  background: #eff6ff;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #bfdbfe;
+  border-left: 4px solid #3b82f6;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1e3a8a;
+  animation: fadeIn 0.3s ease-in;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  transition: all 0.2s ease;
+}
+
+.rec-card:hover {
+  background: #dbeafe;
+  transform: translateX(5px);
+  border-color: #93c5fd;
+}
+
+.add-badge {
+  background: #2563eb;
+  color: white;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 20px;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.2s ease;
+}
+
+.rec-card:hover .add-badge {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.loading-text {
+  color: #2563eb;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.footer {
+  text-align: center;
+  padding: 30px;
+  color: #64748b;
+  margin-top: auto;
+  font-weight: 500;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateX(10px); }
+  to { opacity: 1; transform: translateX(0); }
+}
